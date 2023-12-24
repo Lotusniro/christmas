@@ -222,14 +222,21 @@ button{
 
 function playAudio() {
   var audio = document.getElementById('myAudio');
+if(audio.paused){
   audio.play()
     .then(function() {
       console.log('Audio playback started!');
     })
     .catch(function(error) {
       console.error('Audio playback failed:', error.message);
+
+
     });
+}else{
+  audio.pause();
 }
+}
+
 
 
 </script>
