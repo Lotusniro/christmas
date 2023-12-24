@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+<title>Home</title>
+<style>
+
+*,*:after,*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	font-family: arial;
+	font-size: 16px;
+	margin: 0;
+	background: #04040c;
+	color: #000;
+}
+
+.snow_wrap{
+	height: 85vh;
+	width: 100%;
+	/* background:url('../images/pic.jpg'); */
+	background-size: cover;
+	background-position: center bottom; 
+	overflow: hidden;
+	position: relative;
+}
+
+.snow, .snow:before, .snow:after {
+  position: absolute;
+  top: -650px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: 
+  radial-gradient(4px 4px at 100px 50px, #fff , transparent), 
+  radial-gradient(6px 6px at 200px 150px, #fff, transparent), 
+  radial-gradient(3px 3px at 300px 250px, #fff 50%, transparent), 
+  radial-gradient(4px 4px at 400px 350px, #fff 50%, transparent), 
+  radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent), 
+  radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent), 
+  radial-gradient(4px 4px at 150px 300px, #fff 50%, transparent), 
+  radial-gradient(6px 6px at 250px 400px, #fff 50%, transparent), 
+  radial-gradient(3px 3px at 350px 500px, #fff 50%, transparent);
+  background-size: 650px 650px;
+  animation: snow 3s linear infinite;
+  content: "";
+}
+
+.snow:after {
+  margin-left: -250px;
+  opacity: 0.5;
+  filter: blur(2px);
+  animation-duration: 6s;
+  animation-direction: reverse;
+}
+
+.snow:before {
+	margin-left: -350px;
+  opacity: 0.7;
+  filter: blur(1px);
+  animation-duration: 9s;
+  animation-direction: reverse;
+}
+
+/* ................ */
+.flexy{
+display: flex;
+justify-content: space-around;
+   
+}
+
+ .one{
+    width: 30%;
+    height: 20%;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 10px 10px white;
+    /* animation: snow 3s linear infinite; */
+    /* animation-duration: 9s; */
+    /* animation-direction: reverse; */
+}
+h1{
+    
+
+    color: white;
+}
+
+.hello{
+    display: flex;
+   padding: 20px;
+   justify-content: center;
+   margin-top: 100px;
+    width: 50%;
+    /* box-shadow: 0 0 5px 5px white; */
+    text-align: center;
+    /* animation: snow 3s linear infinite; */
+    /* animation-duration: 9s; */
+    /* animation-direction: reverse; */}
+
+h1{
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 0 0 10px white;
+    /* animation: snow 3s linear infinite; */
+    /* animation-duration: 9s; */
+    /* animation-direction: reverse; */
+}
+
+@keyframes snow {
+  to {
+    transform: translateY(650px);
+  }
+}
+
+@media (max-width: 768px) {
+  .snow_wrap {
+    height: 100vh;
+  }
+
+    .snow, .snow:before, .snow:after {
+        background-size: 350px 350px;
+    }
+    .snow:before {
+        margin-left: -150px;
+    }
+    .snow:after {
+        margin-left: -50px;
+    }
+
+    .flexy{
+        flex-direction: column;
+        align-items: center;
+    }
+
+.one{
+    width: 50%;
+    height: 50%;
+    margin-top: 10%;
+}
+
+    .hello{
+        width: 100%;
+        margin-top: 0px;
+    }
+    .hello h1{
+        font-size: 30px;
+       
+    }
+   
+}
+
+
+</style>
+</head>
+<body>
+    <!-- <embed src="Jingle Bells 3.mp3" loop="true" autostart="true" width="2"
+         height="0"> -->
+<div class="snow_wrap">
+	<div class="snow"></div>
+    <img src="" alt="" srcset="">
+
+  
+<div class="flexy">
+<img class="one" id="img1" src="img/santa.gif" alt="">
+<div class="hello"><h1 id="h1">Merry Christmas & Happy New Year! HO! HO!! HO!!!</h1></div>
+
+
+</div>
+ 
+
+
+</div>
+
+
+<script>
+ 
+var audio = new Audio('Jingle Bells 3.mp3');
+audio.play();
+
+
+</script>
+</body>
+</html>
