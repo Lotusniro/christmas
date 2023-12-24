@@ -120,7 +120,20 @@ h1{
     transform: translateY(650px);
   }
 }
-
+button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgb(230, 48, 48);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 0 0 5px 5px white;
+    color: white;
+}
 @media (max-width: 768px) {
   .snow_wrap {
     height: 100vh;
@@ -155,35 +168,46 @@ h1{
         font-size: 30px;
        
     }
+
+    
    
 }
+
 
 
 </style>
 </head>
 <body>
- 
+    <!-- <embed src="Jingle Bells 3.mp3" loop="true" autostart="true" width="2"
+         height="0"> -->
 <div class="snow_wrap">
 	<div class="snow"></div>
-    <img src="" alt="" srcset="">
+  <img src="" alt="" srcset="">
 
   
 <div class="flexy">
 <img class="one" id="img1" src="img/santa.gif" alt="">
+
 <div class="hello"><h1 id="h1">Merry Christmas & Happy New Year! HO! HO!! HO!!!</h1></div>
 </div>
+ 
+
+
 <audio id="myAudio">
   <source src="Jingle Bells 3.mp3" type="audio/mp3">
   Your browser does not support the audio element.
-</audio>	
+</audio>
+
 </div>
 
-
-
-
-
 <button onclick="playAudio()">&#127925;</button>
-<script> 
+<script>
+ 
+//?how to play audio when open the page
+//write a function to play audio when page is open
+
+// var audio = new Audio('/Jingle Bells 3.mp3');
+// audio.play();
 
 function playAudio() {
   var audio = document.getElementById('myAudio');
@@ -195,6 +219,13 @@ function playAudio() {
       console.error('Audio playback failed:', error.message);
     });
 }
+
+
 </script>
 </body>
 </html>
+
+
+
+  
+
