@@ -162,8 +162,7 @@ h1{
 </style>
 </head>
 <body>
-    <!-- <embed src="Jingle Bells 3.mp3" loop="true" autostart="true" width="2"
-         height="0"> -->
+ 
 <div class="snow_wrap">
 	<div class="snow"></div>
     <img src="" alt="" srcset="">
@@ -172,21 +171,30 @@ h1{
 <div class="flexy">
 <img class="one" id="img1" src="img/santa.gif" alt="">
 <div class="hello"><h1 id="h1">Merry Christmas & Happy New Year! HO! HO!! HO!!!</h1></div>
-
-
 </div>
- 
-
-
+<audio id="myAudio">
+  <source src="Jingle Bells 3.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>	
 </div>
 
 
-<script>
- 
-var audio = new Audio('Jingle Bells 3.mp3');
-audio.play();
 
 
+
+<button onclick="playAudio()">&#127925;</button><script>
+<script> 
+
+function playAudio() {
+  var audio = document.getElementById('myAudio');
+  audio.play()
+    .then(function() {
+      console.log('Audio playback started!');
+    })
+    .catch(function(error) {
+      console.error('Audio playback failed:', error.message);
+    });
+}
 </script>
 </body>
 </html>
